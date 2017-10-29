@@ -1,0 +1,98 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	padding:0;
+	margin:0;
+}
+body{
+	font-family: 微软雅黑;
+}
+
+#body-one{
+	width: 70%;
+	margin: 0 auto;
+	margin-top: 10px;
+	border-bottom:2px solid #DDE1E4;
+	font-family:微软雅黑; 
+}
+#body-one a{
+	color:black;
+	text-decoration: none;
+}
+#body-one a:hover{
+	color:#DB0B18;
+}
+#body-two{
+	width:70%;
+	margin: 0 auto;
+	margin-top: 40px;
+}
+#body-two h4{
+	color:#DB0B18;
+	text-align: center;
+	border-bottom: 1px solid #DDE1E4;
+	padding-bottom: 20px;
+}
+#body-two p{
+	text-align: center;
+	color:grey;
+	padding-bottom: 20px;
+}
+#body-three{
+	width:70%;
+	margin: 0 auto;
+}
+#body p{
+	margin-top: 20px;
+	line-height: 25px;
+}
+#body-four{
+	width:70%;
+	margin:0 auto;
+}
+#body-four a{
+	color:black;
+	text-decoration:none;
+}
+#body-four a:hover{
+	color:#FA8830;
+}
+#body-four .pre-next p span:first-child{
+	width:50%;
+	float:left;
+	display:inline-block;
+	
+}
+#body-four  .pre-next p span:last-child{
+	width:50%;
+   float:right;
+	display:inline-block;
+	
+}
+#footer-warp{
+	width: 100%;
+	height:90px;
+	background-color: #F3F2F2;
+/* 	position: absolute; */
+  	bottom: 0px;
+	 padding-bottom: 0;
+	 clear:both;
+	margin-top: 50px;
+}
+#footer-warp p{
+  text-align: center;
+	font-size: 12px;
+	color:grey;
+	font-family: 微软雅黑;
+}
+#footer-warp .footer{
+	padding-top: 30px;
+}
+#footer-warp a{
+	color:grey;
+	text-decoration: none;
+}
+#footer-warp a:hover{
+	color:red;
+}

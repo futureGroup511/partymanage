@@ -1,0 +1,15 @@
+@charset "utf-8";
+  .content{
+   border:2px solid #CDCDCD;
+   margin:0 auto;
+   width:90%;
+   padding-left:5%;
+   padding-bottom:2%;
+   font-size:1.0em;
+  }
+  .content td{
+  }
+  .content input{
+    margin-top:10px;
+    margin-right:50px;
+  }

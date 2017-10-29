@@ -1,0 +1,67 @@
+@charset "utf-8";
+.{
+  padding:0;
+  margin:0;
+}
+body{
+   background-image:url(../images/denglubeijinger.jpg);
+}   
+.row{
+  width: 100%;
+  margin-top:10px;
+}
+.title{
+  margin-left:22%;
+  font-size: 2.4vw;
+  color:#FFD71F;
+  margin-top:11.5%;
+  font-family: "黑体"；
+}
+.beijing{
+  margin-top:-20px;
+  margin-left:3%;
+}
+form{
+  margin-top:6%;
+}
+.control-label{
+  margin-top:5px;
+}
+.form-control{
+  border-radius: 0px;
+}
+.btn{
+  border-radius:0px;
+  background:#D61A19;
+  border:none;
+  color: white;
+  margin-left:44%;
+  margin-top:20px;
+  width:10%;
+  font-family:"黑体"；
+}
+.btn-default:hover{
+  background:white;
+}
+.form-group img{
+  width:95px;
+}
+.row .form-group h4{
+	padding-top:33px!important;
+	padding-left:120px!important;
+	color:red;
+}
+.tip{
+  width:100%;
+  padding-left:20%;
+}
+.tip h5{
+  height:30px;
+  width:80%;
+  margin-top:18px;
+}
+.row .form-group .col-lg-4 input{
+	width:110%;	
+}
+/* CSS Document */
+

@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	padding:0;
+	margin:0;
+}
+body{
+	font-family: 微软雅黑;
+}
+
+#body-one{
+	width: 70%;
+	margin: 0 auto;
+	margin-top: 10px;
+	border-bottom:2px solid #DDE1E4;
+	font-family:微软雅黑; 
+}
+#body-one a{
+	color:black;
+	text-decoration: none;
+}
+#body-one a:hover{
+	color:#DB0B18;
+}
+#body-two {
+	width:70%;
+	margin: 0 auto;
+	margin-top: 40px;
+	height:200px;
+}
+#body-two span{
+	float:right;
+}
+#body-two p{
+	line-height: 30px;
+	border-bottom: 1px dotted #D0D0D0;
+}
+#body-two a{
+	text-decoration: none;
+	color:black;
+}
+#body-two a:hover{
+	color:#DB0B18;
+}
+#pagecut{
+	float:right;
+	 margin-right: 200px; 
+}
+#footer-warp{
+	width: 100%;
+	height:90px;
+	background-color: #F3F2F2;
+/* 	position: absolute; */
+  	bottom: 0px;
+	 padding-bottom: 0;
+	 clear:both;
+	margin-top: 50px;
+}
+#footer-warp p{
+  text-align: center;
+	font-size: 12px;
+	color:grey;
+	font-family: 微软雅黑;
+}
+#footer-warp .footer{
+	padding-top: 30px;
+}
+#footer-warp a{
+	color:grey;
+	text-decoration: none;
+}
+#footer-warp a:hover{
+	color:red;
+}

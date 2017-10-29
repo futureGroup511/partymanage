@@ -1,0 +1,146 @@
+@-webkit-keyframes appear{
+	from{
+		opacity: 0;
+		}
+	to 	{
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes headline_appear_animation{
+	from{
+		opacity: 0;
+	}
+	25% {
+		opacity: 0;
+	}	
+	to 	{
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes contentappear{
+	from {
+		-webkit-transform: scale(0);
+		opacity: 0;
+	}
+	50% {
+		-webkit-transform:  scale(0.5);
+		opacity: 0;
+	}
+	to {
+		-webkit-transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes appear{
+	from{
+		opacity: 0;
+		}
+	to 	{
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes headline_appear_animation{
+	from{
+		opacity: 0;
+	}
+	25% {
+		opacity: 0;
+	}	
+	to 	{
+		opacity: 1;
+	}
+}
+
+@-moz-keyframes contentappear{
+	from {
+		-moz-transform: scale(0);
+		opacity: 0;
+	}
+	50% {
+		-moz-transform:  scale(0.5);
+		opacity: 0;
+	}
+	to {
+		-moz-transform: scale(1);
+		opacity: 1;
+	}
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+.main{
+ /*! border:1px solid; */
+  height: 600px;
+  width: 100%;
+  margin-top: 10px;
+}
+body{
+	background: url(../../images/404.jpg) no-repeat center center;
+	font-family: 'Helvetica Neue';
+	width: auto;
+	margin: 0 auto 100px auto;
+}
+
+.header {
+	top: 0;
+	width: 470px;
+	position: absolute;
+	margin-top:50px;
+}
+.header p{
+	margin-top:-62px;
+	margin-left:80px;;
+	font-size: 1.5em;
+	color: black;
+}
+.header{
+	margin-left: 13%;
+	position: absolute;
+}
+
+.content {
+  margin:33% auto auto 33%;
+	padding: 5px 2px 38px 6px;
+	width: 500px;
+	color: #E26D4A;
+	-webkit-animation: 2s contentappear;
+	-moz-animation: 2s contentappear;
+	border: 1px solid #E26D4A;
+	box-shadow: inset 0px 1px rgba(255, 255, 255, 0.4),
+				0 3px 8px #000000;
+	border-radius: 6px;
+	font: 16px;
+	line-height: 25px;
+	font-weight: 300;
+	position:absolute;
+}
+
+.content h2{
+	text-transform: uppercase;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+form{
+	height: 50px;
+	width: 80%;
+	margin: 0 auto;
+	vertical-align:middle;
+}
+.content .button{
+	width: 20%;
+	height: 44px;
+	background-color:#E26D4A;
+	vertical-align:middle;
+}
+center input{
+	margin-top:-13%;
+	 color: white;
+	border-radius: 15px;
+}
