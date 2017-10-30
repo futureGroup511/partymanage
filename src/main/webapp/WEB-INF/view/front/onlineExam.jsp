@@ -79,17 +79,17 @@
 								</div>
 								<div class="radio">
 									<label> <input type="radio"
-										name="answer_${q.id}" value="b"> B. ${q.aAnswer}
+										name="answer_${q.id}" value="b"> B. ${q.bAnswer}
 									</label>
 								</div>
 								<div class="radio">
 									<label> <input type="radio"
-										name="answer_${q.id}" value="c"> C. ${q.aAnswer}
+										name="answer_${q.id}" value="c"> C. ${q.cAnswer}
 									</label>
 								</div>
 								<div class="radio">
 									<label> <input type="radio"
-										name="answer_${q.id}" value="d"> D. ${q.aAnswer}
+										name="answer_${q.id}" value="d"> D. ${q.dAnswer}
 									</label>
 								</div>
 								
