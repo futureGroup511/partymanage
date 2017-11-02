@@ -9,6 +9,11 @@
 <title>a</title>
 ${bootstrapCss }
 <style type="text/css">
+*{
+	font-family: Microsoft YaHei,微软雅黑 !important;
+}
+</style>
+<style type="text/css">
 .row {
 	margin-bottom: 20px;
 }

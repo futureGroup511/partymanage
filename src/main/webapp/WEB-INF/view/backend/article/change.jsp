@@ -9,6 +9,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>a</title> ${jquery } ${bootstrapCss }
+<style type="text/css">
+*{
+	font-family: Microsoft YaHei,微软雅黑 !important;
+}
+</style>
 <link rel="stylesheet" type="text/css"
 	href="${rootPath }plugin/wangeditor/css/wangEditor.min.css">
 <style type="text/css">

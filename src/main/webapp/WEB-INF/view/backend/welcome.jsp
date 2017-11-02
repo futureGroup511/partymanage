@@ -10,6 +10,7 @@
 *{
 	padding:0;
 	margin:0;
+	font-family: Microsoft YaHei,微软雅黑 !important;
 }
 .background img{
 	width:100%;
@@ -36,7 +37,9 @@ h2{
         </div>
     </div>
 	<div class="background navbar-fixed-top"  style="position:absolute; z-index:-1;width:100%;opacity:0.3;">
+    	<!-- 
     	<img  class="img-responsive" width="100%;" src="${rootPath }images/577a4c594718d_610.jpg"/>
+    	-->
     </div>
    
     <script type="text/javascript">
