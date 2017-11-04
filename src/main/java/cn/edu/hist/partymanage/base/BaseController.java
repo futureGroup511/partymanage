@@ -17,6 +17,7 @@ import cn.edu.hist.partymanage.service.IVideoService;
 import cn.edu.hist.partymanage.service.IVideoTypeService;
 import cn.edu.hist.partymanage.service.IWatchVideoLogService;
 import cn.edu.hist.partymanage.service.impl.ExamLogService;
+import cn.edu.hist.partymanage.service.impl.QuestionInTestService;
 import cn.edu.hist.partymanage.service.impl.QuestionLogService;
 
 /*
@@ -76,4 +77,7 @@ public class BaseController {
 	
 	@Resource
 	protected ExamLogService examLogService;
+	
+	@Resource
+	protected QuestionInTestService questionInTestService;
 }

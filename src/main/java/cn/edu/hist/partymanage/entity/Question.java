@@ -1,5 +1,7 @@
 package cn.edu.hist.partymanage.entity;
 
+import java.util.logging.Logger;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -137,7 +139,6 @@ public class Question {
 				+ dAnswer + ", answer=" + answer + ", analyse=" + analyse + ", myAnswer=" + myAnswer + ", myScore="
 				+ myScore + "]";
 	}
-	
 	public boolean isDuoxuan() {
 		if(this.answer==null) {
 			return false;
@@ -146,5 +147,19 @@ public class Question {
 			return true;
 		}
 		return false;
+	}
+	
+	//检查已经回答的答案是否选择A,宋民举
+	public boolean isaCheck() {
+		return myAnswer==null?false:myAnswer.toLowerCase().contains("a");
+	}
+	public boolean isbCheck() {
+		return myAnswer==null?false:myAnswer.toLowerCase().contains("b");
+	}
+	public boolean iscCheck() {
+		return myAnswer==null?false:myAnswer.toLowerCase().contains("c");
+	}
+	public boolean isdCheck() {
+		return myAnswer==null?false:myAnswer.toLowerCase().contains("d");
 	}
 }

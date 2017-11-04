@@ -46,23 +46,51 @@
 									【多选】${status.index+1}.${q.title}<span> * 分值:${q.score}</span>
 								</p>
 								<div class="radio">
-									<label> <input type="checkbox"
-										name="answer_${q.id}" value="A"> A. ${q.aAnswer}
+									<label> 
+										<c:choose>
+											<c:when test="${q.aCheck }">
+												<input type="checkbox" name="answer_${q.id}" value="A" checked="checked"> A. ${q.aAnswer}
+											</c:when>
+											<c:otherwise>
+												<input type="checkbox" name="answer_${q.id}" value="A"> A. ${q.aAnswer}
+											</c:otherwise>
+										</c:choose>
 									</label>
 								</div>
 								<div class="radio">
-									<label> <input type="checkbox"
-										name="answer_${q.id}"  value="B"> A. ${q.bAnswer}
+									<label>
+										<c:choose>
+											<c:when test="${q.bCheck }">
+												<input type="checkbox" name="answer_${q.id}" value="B" checked="checked"> B. ${q.bAnswer}
+											</c:when>
+											<c:otherwise>
+												<input type="checkbox" name="answer_${q.id}" value="B"> B. ${q.bAnswer}
+											</c:otherwise>
+										</c:choose>
 									</label>
 								</div>
 								<div class="radio">
-									<label> <input type="checkbox"
-										name="answer_${q.id}" value="C"> A. ${q.cAnswer}
+									<label>
+										<c:choose>
+											<c:when test="${q.cCheck }">
+												<input type="checkbox" name="answer_${q.id}" value="C" checked="checked"> C. ${q.cAnswer}
+											</c:when>
+											<c:otherwise>
+												<input type="checkbox" name="answer_${q.id}" value="C"> C. ${q.cAnswer}
+											</c:otherwise>
+										</c:choose>
 									</label>
 								</div>
 								<div class="radio">
-									<label> <input type="checkbox"
-										name="answer_${q.id}" value="D"> A. ${q.dAnswer}
+									<label> 
+										<c:choose>
+											<c:when test="${q.dCheck }">
+												<input type="checkbox" name="answer_${q.id}" value="D" checked="checked"> D. ${d.dAnswer}
+											</c:when>
+											<c:otherwise>
+												<input type="checkbox" name="answer_${q.id}" value="D"> D. ${q.dAnswer}
+											</c:otherwise>
+										</c:choose>
 									</label>
 								</div>
 							</div>
@@ -73,23 +101,52 @@
 									【单选】${status.index+1}.${q.title}<span> * 分值:${q.score}</span>
 								</p>
 								<div class="radio">
-									<label> <input type="radio"
-										name="answer_${q.id}" value="a"> A. ${q.aAnswer}
+									<label>
+										<c:choose>
+										
+											<c:when test="${q.aCheck }">
+												<input type="radio" name="answer_${q.id}" value="a" checked="checked"> A. ${q.aAnswer}
+											</c:when>
+											<c:otherwise>
+												<input type="radio" name="answer_${q.id}" value="a"> A. ${q.aAnswer}
+											</c:otherwise>
+										</c:choose>
 									</label>
 								</div>
 								<div class="radio">
-									<label> <input type="radio"
-										name="answer_${q.id}" value="b"> B. ${q.bAnswer}
+									<label>
+										<c:choose>
+											<c:when test="${q.bCheck }">
+												<input type="radio" name="answer_${q.id}" value="b" checked="checked"> B. ${q.bAnswer}
+											</c:when>
+											<c:otherwise>
+												<input type="radio" name="answer_${q.id}" value="b"> B. ${q.bAnswer}
+											</c:otherwise>
+										</c:choose>
 									</label>
 								</div>
 								<div class="radio">
-									<label> <input type="radio"
-										name="answer_${q.id}" value="c"> C. ${q.cAnswer}
+									<label>
+										<c:choose>
+											<c:when test="${q.cCheck }">
+												<input type="radio" name="answer_${q.id}" value="c" checked="checked"> C. ${q.cAnswer}
+											</c:when>
+											<c:otherwise>
+												<input type="radio" name="answer_${q.id}" value="c"> C. ${q.cAnswer}
+											</c:otherwise>
+										</c:choose>
 									</label>
 								</div>
 								<div class="radio">
-									<label> <input type="radio"
-										name="answer_${q.id}" value="d"> D. ${q.dAnswer}
+									<label>
+										<c:choose>
+											<c:when test="${q.dCheck }">
+												<input type="radio" name="answer_${q.id}" value="d" checked="checked"> D. ${q.dAnswer}
+											</c:when>
+											<c:otherwise>
+												<input type="radio" name="answer_${q.id}" value="d"> D. ${q.dAnswer}
+											</c:otherwise>
+										</c:choose>
 									</label>
 								</div>
 								
@@ -98,8 +155,9 @@
 
 					</c:forEach>
 					<div class="submit">
-						<input type="submit" value="交 卷" class="btn btn-primary">
-
+							<input id="istemp" type="hidden" name="istemp" value="" />
+							<button type="submit" class="btn btn-success" onclick="document.getElementById('istemp').value='y';">暂存</button>
+							<button type="submit" class="btn btn-primary">交卷</button>
 					</div>
 
 				</form>
