@@ -91,11 +91,11 @@
 	width:100%;
 }
 .nav .row .navbar-nav{
-	margin-left:-10%;
+	margin-left:-8%;
 }
 .nav .row li{
 	font-size: 16px;
-	font-weight: 550;
+	font-weight:600;
 	font-family: 微软雅黑;
 }
 .nav .row li a{
