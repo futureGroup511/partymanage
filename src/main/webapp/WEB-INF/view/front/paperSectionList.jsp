@@ -27,6 +27,9 @@
 				&nbsp;&nbsp;>&nbsp;&nbsp;${flag}</span>
 			</p>
 		</div>
+		<c:choose>
+			
+		</c:choose>
 		<div id="body-two">
 			<ol>
 				<c:forEach items="${pc.data }" var="paper">

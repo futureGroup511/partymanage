@@ -18,7 +18,7 @@
 <%@ include file="head.jsp" %>
 <div id="banner">
  <div class="col-lg-12 col-md-12 col-xs-12">
-   <div id="slidershow" style="width:90%;margin:0 auto;" class="carousel slide" data-ride="carousel">
+   <div id="slidershow" class="carousel slide" data-ride="carousel"> 
    <!--设置图片轮番的顺序-->
     <ol class="carousel-indicators">
        <li class="active" data-target="#slidershow" data-slide-to="0"></li>
@@ -27,7 +27,7 @@
        <li data-target="#slidershow" data-slide-to="3"></li>
     </ol>
    <!--设置轮播图片-->
-    <div class="carousel-inner">
+    <div class="carousel-inner" style="width:90%!important;">
     	<c:forEach items="${indexImages}" var="indexImage" varStatus="status">
     		<c:choose>
     			<c:when test="${status.index==0}">
