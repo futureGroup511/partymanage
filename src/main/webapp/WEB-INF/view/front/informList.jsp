@@ -67,7 +67,7 @@
 		</c:if>
 		
 		<c:if test="${ empty pc.data}">
-			<h3 style="height: 200px;margin-left: 550px;margin-top: 160px;color: #DB0B18;">暂时没有通知！</h3>
+			<h3 style="height: 280px;text-align:center; color:red;">暂时没有通知！</h3>
 		</c:if>
 	</div>
 	<%@ include file="footer.jsp" %>

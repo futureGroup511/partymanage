@@ -17,19 +17,19 @@
 <%@ include file="head.jsp"%>
 <!--以上为头部-->
 <div id="body">
- <div id="body-one">
-   <p><img src="${rootPath}images/topimg.png"> 
-   <span>您的位置：<a href="${rootPath}party/toFront/toIndex">首页
-   </a>&nbsp;&nbsp;>&nbsp;&nbsp;党委简介</span></p>
- </div>
-<div id="body-two">
-<c:if test="${ not empty intro }">
-${intro}
-</c:if>
-<c:if test="${empty intro}">
-暂无简介
-</c:if>
-</div>
+	 <div id="body-one">
+	   <p><img src="${rootPath}images/topimg.png"> 
+	   <span>您的位置：<a href="${rootPath}party/toFront/toIndex">首页
+	   </a>&nbsp;&nbsp;>&nbsp;&nbsp;党委简介</span></p>
+	 </div>
+	<div id="body-two">
+		<c:if test="${ not empty intro }">
+			${intro}
+		</c:if>
+		<c:if test="${empty intro}">
+			<h3 style="height: 240px; text-align:center; color:red">暂无简介</h3>
+		</c:if>
+	</div>
 </div>
 <%@ include file = "footer.jsp" %>
 </body>

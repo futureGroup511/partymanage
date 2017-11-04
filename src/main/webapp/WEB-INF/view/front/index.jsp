@@ -100,8 +100,18 @@
                  	<c:forEach items="${runRecord}" var="article">
               
                      		<li style="float: left; width: 25%;">
-							 	<div class="pic"><a href="${rootPath }party/article/lookArticle?id=${article.id}">
-							 	<img src="${rootPath}${article.firstImg}"></a></div>
+							 	<div class="pic">
+							 		<c:choose>
+							 			<c:when test=" ${empty article.firstImg}">
+							 				<a href="${rootPath }party/article/lookArticle?id=${article.id}">						 	
+							 					<img src="${rootPath}images/mrtp.jpg"></a>
+							 			</c:when>
+							 			<c:otherwise>
+							 				<a href="${rootPath }party/article/lookArticle?id=${article.id}">						 	
+							 					<img src="${rootPath}${article.firstImg}"></a>
+							 			</c:otherwise>
+							 		</c:choose>
+							 	</div>
 							 	<div class="title">
 							 	<a href="${rootPath }party/article/lookArticle?id=${article.id}">${article.title }</a></div>
 						 	</li>
