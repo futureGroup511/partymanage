@@ -27,7 +27,7 @@
        <li data-target="#slidershow" data-slide-to="3"></li>
     </ol>
    <!--设置轮播图片-->
-    <div class="carousel-inner">
+    <div class="carousel-inner" style="width:91%!important;height:300px!important;margin-top:10px;">
       <c:forEach items="${indexImages}" var="indexImage" varStatus="status">
     		<c:choose>
     			<c:when test="${status.index==0}">

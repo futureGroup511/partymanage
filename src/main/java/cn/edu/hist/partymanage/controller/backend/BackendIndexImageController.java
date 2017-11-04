@@ -53,7 +53,7 @@ public class BackendIndexImageController extends BaseController{
 			return null;
 		}
 		String name = user.getId()+new Date().getTime()+temp;
-		String path = request.getServletContext().getRealPath("/file/images/");
+		String path = request.getSession().getServletContext().getRealPath("/file/images/");
 		File img = new File(path,name);
 		try {
 			imgFile.transferTo(img);

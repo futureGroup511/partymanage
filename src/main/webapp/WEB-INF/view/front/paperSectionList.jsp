@@ -27,50 +27,60 @@
 				&nbsp;&nbsp;>&nbsp;&nbsp;${flag}</span>
 			</p>
 		</div>
-		<div id="body-two">
-			<ol>
-				<c:forEach items="${pc.data }" var="paper">
-					<p>
-						<a
-							href="${rootPath}party/article/lookArticle?
-							id=${paper.id}&&type=${type}&&search=${search}">${paper.title }</a><span>${ paper.createDate}</span></a>
-					</p>
-				</c:forEach>
-			</ol>
-			<div id="pagecut" style="margin-right: 100px; text-align: right;">
-				<ul class="pagination">
-					<li><a
-						href="${rootPath}party/article/list?
-						page=${pc.prePage}&&type=${type}&&search=${search}">上一页</a></li>
-					<c:if test="${1 < pc.currentPage -3}">
-						<li><a
-							href="${rootPath}party/article/list?page=1&&type=${type}
-							&&search=${search}">1</a></li>
-					</c:if>
-
-					<c:forEach var="i"
-						begin="${pc.currentPage-3>0?pc.currentPage-3:1 }"
-						end="${pc.currentPage+3>pc.pageNum?pc.pageNum:pc.currentPage+3  }">
-						<c:choose>
-							<c:when test="${i>0 && i == pc.currentPage }">
-								<li class="active"><a
-									href="${rootPath}party/article/list?
-									page=${i }&&type=${type}&&search=${search}">${i}</a></li>
-							</c:when>
-
-							<c:when test="${i>0 && i != postPS.currentPage }">
+		
+		<c:choose>
+		
+			<c:when test="${empty pc.data}">
+				<h3 style="height: 280px; text-align:center; color:red" >暂没有该信息</h3>				
+			</c:when>
+			<c:otherwise>
+				<div id="body-two">
+					<ol>
+						<c:forEach items="${pc.data }" var="paper">
+							<p>
+								<a
+									href="${rootPath}party/article/lookArticle?
+									id=${paper.id}&&type=${type}&&search=${search}">${paper.title }</a><span>${ paper.createDate}</span></a>
+							</p>
+						</c:forEach>
+					</ol>
+					<div id="pagecut" style="margin-right: 100px; text-align: right;">
+						<ul class="pagination">
+							<li><a
+								href="${rootPath}party/article/list?
+								page=${pc.prePage}&&type=${type}&&search=${search}">上一页</a></li>
+							<c:if test="${1 < pc.currentPage -3}">
 								<li><a
-									href="${rootPath}party/article/list?
-									page=${i }&&type=${type}&&search=${search}">${i}</a></li>
-							</c:when>
-						</c:choose>
-					</c:forEach>
-					<li><a
-						href="${rootPath}party/article/list?
-						page=${pc.nextPage}&&type=${type}&&search=${search}">下一页</a></li>
-				</ul>
-			</div>
-		</div>
+									href="${rootPath}party/article/list?page=1&&type=${type}
+									&&search=${search}">1</a></li>
+							</c:if>
+		
+							<c:forEach var="i"
+								begin="${pc.currentPage-3>0?pc.currentPage-3:1 }"
+								end="${pc.currentPage+3>pc.pageNum?pc.pageNum:pc.currentPage+3  }">
+								<c:choose>
+									<c:when test="${i>0 && i == pc.currentPage }">
+										<li class="active"><a
+											href="${rootPath}party/article/list?
+											page=${i }&&type=${type}&&search=${search}">${i}</a></li>
+									</c:when>
+		
+									<c:when test="${i>0 && i != postPS.currentPage }">
+										<li><a
+											href="${rootPath}party/article/list?
+											page=${i }&&type=${type}&&search=${search}">${i}</a></li>
+									</c:when>
+								</c:choose>
+							</c:forEach>
+							<li><a
+								href="${rootPath}party/article/list?
+								page=${pc.nextPage}&&type=${type}&&search=${search}">下一页</a></li>
+						</ul>
+					</div>
+				</div>
+			</c:otherwise>
+		</c:choose>
+		
 	</div>
 <%@ include file="footer.jsp" %>
 	<!--页脚结束-->

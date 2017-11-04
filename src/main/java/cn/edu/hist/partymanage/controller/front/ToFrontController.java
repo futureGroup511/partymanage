@@ -172,17 +172,21 @@ public class ToFrontController extends BaseController {
 		ModelAndView mv = new ModelAndView();
 		User user = (User) session.getAttribute("user");
 		Department department = departmentService.getById(user.getDepartmentId());
+		if(department!=null){
+			//只要党委部门
+			while(department.getType()>2){
+				department = departmentService.getById(department.getBelongId());
+			}
+			logger.info("department "+department);
+			if(department.getType()==2){
+				mv.addObject("intro", department.getSummary());
+			}
+			
+		}else{
+			mv.addObject("intro", null);
+		}
 		
-		//只要党委部门
-		while(department.getType()>2){
-			department = departmentService.getById(department.getBelongId());
-		}
-		logger.info("department "+department);
-		if(department.getType()==2){
-			mv.addObject("intro", department.getSummary());
-		}
 		mv.setViewName("front/intro");
-		
 		return mv;
 	}
 		

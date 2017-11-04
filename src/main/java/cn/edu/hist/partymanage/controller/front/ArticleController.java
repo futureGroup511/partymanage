@@ -86,7 +86,7 @@ public class ArticleController extends BaseController {
 		 logger.info("type: "+ type);
 		 User user = (User) session.getAttribute("user");
 		 pc = articleService.getArticles(curpage, 15, type, search, user) ;
-		if(type !=0 ){
+		if(type !=0 && pc.getData().size() > 0){
 			mv.addObject("type", pc.getData().get(0).getType());
 			mv.addObject("flag", pc.getData().get(0).getTypeName());
 		}else{
@@ -108,8 +108,7 @@ public class ArticleController extends BaseController {
 	 * @date 2017/5/11
  	 * @param id 文章的id
 	 * @param search 关键字（可为空）
-	 * @param upAndDown false：上一篇， true：下一篇 
-	 * @param type 文章类型的id
+	 * @param type 文章类型的id 如果没有进行按类型搜索type = 0
 	 * @param session
 	 * @return
 	 */

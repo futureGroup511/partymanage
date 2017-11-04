@@ -18,7 +18,7 @@
 <%@ include file="head.jsp" %>
 <div id="banner">
  <div class="col-lg-12 col-md-12 col-xs-12">
-   <div id="slidershow" class="carousel slide" data-ride="carousel">
+   <div id="slidershow" class="carousel slide" data-ride="carousel"> 
    <!--设置图片轮番的顺序-->
     <ol class="carousel-indicators">
        <li class="active" data-target="#slidershow" data-slide-to="0"></li>
@@ -27,7 +27,7 @@
        <li data-target="#slidershow" data-slide-to="3"></li>
     </ol>
    <!--设置轮播图片-->
-    <div class="carousel-inner">
+    <div class="carousel-inner" style="width:90%!important;">
     	<c:forEach items="${indexImages}" var="indexImage" varStatus="status">
     		<c:choose>
     			<c:when test="${status.index==0}">
@@ -52,9 +52,9 @@
   </div>
  </div>
 </div>
-<div id="banner-one">
+<div id="banner-one" style="width:90%;margin:0 auto;">
    <div class="row">
-       <div class="col-lg-9 col-lg-offset-1 col-md-9 col-md-offset-1 col-xs-9 col-xs-offset-1">
+       <div class="col-lg-9 col-md-9 col-xs-9 ">
        	<img src="${rootPath}images/tongzhi.png"> 通知公告 
        		<c:forEach items="${informList}" var="inform">
        			<img src="${rootPath}images/jiantou.png"><a href="${rootPath }party/inform/lookInform?id=${inform.id}"> ${inform.title}  ${inform.createDate}</a> 
@@ -100,8 +100,18 @@
                  	<c:forEach items="${runRecord}" var="article">
               
                      		<li style="float: left; width: 25%;">
-							 	<div class="pic"><a href="${rootPath }party/article/lookArticle?id=${article.id}">
-							 	<img src="${rootPath}${article.firstImg}"></a></div>
+							 	<div class="pic">
+							 		<c:choose>
+							 			<c:when test=" ${empty article.firstImg}">
+							 				<a href="${rootPath }party/article/lookArticle?id=${article.id}">						 	
+							 					<img src="${rootPath}images/mrtp.jpg"></a>
+							 			</c:when>
+							 			<c:otherwise>
+							 				<a href="${rootPath }party/article/lookArticle?id=${article.id}">						 	
+							 					<img src="${rootPath}${article.firstImg}"></a>
+							 			</c:otherwise>
+							 		</c:choose>
+							 	</div>
 							 	<div class="title">
 							 	<a href="${rootPath }party/article/lookArticle?id=${article.id}">${article.title }</a></div>
 						 	</li>

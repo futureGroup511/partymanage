@@ -102,6 +102,7 @@ body{
 }
 #banner .col-lg-12 img{
 	height:325px;
+	width:100%!important;
 }
 /* .nav .row{
 	width:100%;
@@ -134,7 +135,6 @@ color:red;
 /*  .btn-group{
   width: 100%;
 }  */
-
 #banner-one{
 	height:40px;
 	background-color: #F5F5F5;
