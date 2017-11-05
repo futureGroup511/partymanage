@@ -38,6 +38,8 @@ public class ExamLogService extends BaseDao<ExamLog> {
 		}catch(Exception e) {
 			
 		}
-		
+	}
+	public ExamLog getById(int id) {
+		return this.getEntity(id);
 	}
 }

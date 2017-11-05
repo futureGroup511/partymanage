@@ -100,6 +100,11 @@ public class BackendQuestionTypeController extends BaseController {
 	public ModelAndView deleteReport(@RequestParam(name = "id", defaultValue = "0") int id) {
 		ModelAndView modelAndView = new ModelAndView(viewPath + "report");
 		if(id>0){
+			ExamLog examLog = examLogService.getById(id);
+			if(examLog!=null) {
+				questionInTestService.delete(examLog.getUserId(),examLog.getQuestionTypeId());
+				questionLogService.delete(examLog.getUserId(), examLog.getQuestionTypeId());
+			}
 			examLogService.delete(id);
 			modelAndView.addObject("remind","删除成功。");
 		}else {

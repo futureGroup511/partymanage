@@ -154,10 +154,10 @@
 						</c:if>
 
 					</c:forEach>
-					<div class="submit">
+					<div class="submit" style="text-align:center;">
 							<input id="istemp" type="hidden" name="istemp" value="" />
-							<button type="submit" class="btn btn-success" onclick="document.getElementById('istemp').value='y';">暂存</button>
-							<button type="submit" class="btn btn-primary">交卷</button>
+							<button type="submit" class="btn btn-success" style="margin:5px 20px;padding:5px 10px;" onclick="document.getElementById('istemp').value='y';">暂存</button>
+							<button type="submit" class="btn btn-primary" style="margin:5px 20px;padding:5px 10px;">交卷</button>
 					</div>
 
 				</form>
