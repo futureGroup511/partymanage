@@ -39,7 +39,7 @@ ${bootstrapCss}
  <div class="col-lg-4 col-lg-offset-4 col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2">
   <div class="row">
   <div class="form-group">
-  	<div class="col-lg-4   col-md-4 col-xs-4">
+  	<div class="col-lg-4 col-md-4 col-xs-3">
     <label for="inputEmail3" class="control-label">密码:</label>
     </div>
     <div class="col-lg-8 col-lg-pull-1 col-md-8 col-xs-8">
