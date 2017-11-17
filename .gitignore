@@ -153,7 +153,7 @@ buildNumber.properties
 # Gradle:
 .idea/**/gradle.xml
 .idea/**/libraries
-partymanage.iml
+*.iml
 
 # CMake
 cmake-build-debug/
